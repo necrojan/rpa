@@ -61,6 +61,14 @@ To use the app, open two browser one in incognito
 </br >
 `/fullfiller`
 
+To clear the database records
+```angular2html
+php artisan tinker
+
+> $items = Item::all();
+> $items->map->delete();
+```
+
 ## Test
 To test the app, simple run this into the terminal.
 ```
