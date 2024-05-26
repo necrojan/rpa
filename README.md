@@ -17,7 +17,7 @@ This app has been developed in Lavel Valet environment for setting up the Larave
 
 ## Installation
 Make sure to update the necessary values from the `.env` file before running the `composer install` and `artisan migrate command.`
-
+It might ask for creation of sqlite file when running `artisa migrate` simply select Yes
 ```
 git clone https://github.com/necrojan/rpa.git
 cp .env.example .env
@@ -26,7 +26,15 @@ php artisan migrate
 npm install
 
 ```
+To enable Reverb broadcasting driver and to generate env variables needed.
 
+```
+php artisan reverb:install
+```
+Since this was developed in Laravel valet, we need to update the Host.
+```
+REVERB_HOST="rpa.test"
+```
 
 ## Usage
 To compile the assets / JS run the command
@@ -47,6 +55,11 @@ php artisan queue:listen
 
 ```
 
+To use the app, open two browser one in incognito
+</br >
+`/cashier` 
+</br >
+`/fullfiller`
 
 ## Test
 To test the app, simple run this into the terminal.
