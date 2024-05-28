@@ -34,8 +34,18 @@ Since this was developed in Laravel valet, we need to update the Host.
 ```
 REVERB_HOST="rpa.test"
 ```
+Note: if using localhost we can leave this as it is to `REVERB_HOST="localhost"`
 
 ## Usage
+
+To run this app locally without using Laravel valet 
+```
+php artisan serve
+
+```
+
+
+
 To compile the assets / JS run the command
 ```
 npm run dev
@@ -55,11 +65,18 @@ php artisan queue:listen
 ```
 
 To use the app, open two browser one in incognito
-</br >
+
+(Laravel Valet)
 </br >
 `http://rpa.test/cashier` 
 </br >
 `http://rpa.test/fullfiller`
+
+(Localhost)
+<br />
+`http://127.0.0.1:8000/cashier`
+<br />
+`http://127.0.0.1:8000/fullfiller`
 
 To clear the database records
 ```
