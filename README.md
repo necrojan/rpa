@@ -9,9 +9,7 @@ real-time updates.
 
 - Realtime Messaging
 
-This app has been developed in Lavel Valet environment for setting up the Laravel valet visit this <a href="https://laravel.com/docs/11.x/valet" target="_blank">link</a>
-
-
+This app has been developed in <b>Lavel Valet</b> environment for setting up the Laravel valet visit this <a href="https://laravel.com/docs/11.x/valet" target="_blank">link</a>
 
 
 
@@ -22,6 +20,7 @@ It might ask for creation of sqlite file when running `artisa migrate` simply se
 git clone https://github.com/necrojan/rpa.git
 cp .env.example .env
 composer install
+php artisan key:generate
 php artisan migrate
 npm install
 
@@ -42,9 +41,9 @@ To compile the assets / JS run the command
 npm run dev
 ```
 
-Broadcast the events
+Broadcast the events (--debug is optional)
 ```
-php artisan reverb:start
+php artisan reverb:start --debug
 
 ```
 
@@ -57,12 +56,13 @@ php artisan queue:listen
 
 To use the app, open two browser one in incognito
 </br >
-`/cashier` 
 </br >
-`/fullfiller`
+`http://rpa.test/cashier` 
+</br >
+`http://rpa.test/fullfiller`
 
 To clear the database records
-```angular2html
+```
 php artisan tinker
 
 > $items = Item::all();
